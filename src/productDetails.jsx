@@ -10,13 +10,19 @@ function ProductDetails() {
 
   const [SingleProduct, setSingleProduct] = useState({})
   useEffect(() => {
-    axios.get(`https://fakestoreapi.com/products/${prod_id}`)
+    axios.
+      get(`https://fakestoreapi.com/products/${prod_id}`)
       .then((response) => 
         setSingleProduct(response.data))
       .catch((error) => 
         console.error("Error fetching data:", error));
   }, []);
   
+  // Loading state to prevent crashes before data loads
+  if (!SingleProduct) {
+    return <p>Loading...</p>;
+  }
+
   return (
 
     <div>
@@ -142,7 +148,7 @@ function ProductDetails() {
             </a>
 
             <a
-              href="#"
+              href="/"
               title=""
               className="text-white mt-4 sm:mt-0 border bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 flex items-center justify-center"
               role="button"
