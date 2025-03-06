@@ -9,7 +9,6 @@ import {
 
 import ProductDetails from "./productDetails.jsx";
 
-
 const router = createBrowserRouter([
   {
     path: "/",

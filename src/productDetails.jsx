@@ -6,9 +6,8 @@ function ProductDetails() {
 
   let { prod_id } = useParams();
   console.log(prod_id);
-  
-
   const [SingleProduct, setSingleProduct] = useState({})
+  
   useEffect(() => {
     axios.
       get(`https://fakestoreapi.com/products/${prod_id}`)

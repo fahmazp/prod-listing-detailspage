@@ -10,6 +10,7 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
+react module assignment.zip
 *.local
 
 # Editor directories and files
