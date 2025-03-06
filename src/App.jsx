@@ -3,7 +3,7 @@ import Products from "./Products";
 import axios from "axios";
 import "./style.css";
 
-const API_URL = "http://localhost:5000/products"; // backend URL
+const API_URL = "https://express-todo-deploy.vercel.app/products"; // backend URL
 
 function App() {
   const [products, setProducts] = useState([]);
